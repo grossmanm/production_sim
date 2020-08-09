@@ -6,6 +6,11 @@ class Person {
 
     float hunger = 1; // hunger ranges from 0 to 1; 0 being starving, 1 being full
     float health = 1; // health ranges from 0 to 1; 0 being dead, 1 being fully healthy
+    float thrist = 1; // thirst ranges from 0 to 1; 0 being dehydrated, 1 being quenched
+    float fatigue = 1; // fatigue ranges from 0 to 1; 0 being exhausted, 1 being energized
+    float temp_ext; // external temperature of the Person
+    flaot temp_int; // internal temperature of the Person
+
 
     Person(string name) {
       p_name = name;
