@@ -39,7 +39,7 @@ class Person {
     void updateThirst(float u_thirst = -0.001) { // updates thirst value, will be called each tick and whenever character drinks
       thirst += u_thirst;
       if (thirst < 0) { // thirst should not drop bellow 0
-        thrist = 0;
+        thirst = 0;
       }
     }
 
@@ -63,10 +63,10 @@ class Person {
       if (hunger == 0) {
         u_health -= 0.0001;
       }
-      if (thrirst == 0) {
+      if (thirst == 0) {
         u_health -= 0.0005;
       }
-      if (fatiuge == 0) {
+      if (fatigue == 0) {
         u_health -= 0.00001;
       }
       health += u_health;

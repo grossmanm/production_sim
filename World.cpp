@@ -5,9 +5,12 @@
 #include <cstdlib>
 #include <math.h>
 #include "Person.h"
+#include "Map.h"
+
 
 int main() {
   bool game = true;
+  Map world = Map();
   Person people[] = { Person("Neo")};
   people[0].getName();
   int size = *(&people + 1) - people;
