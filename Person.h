@@ -31,14 +31,23 @@ class Person {
 
     void updateHunger(float u_hunger = -0.001) { // updates hunger value, will be called each tick and whenever character eats
       hunger += u_hunger;
+      if (hunger < 0) { // hunger should not drop bellow 0
+        hunger = 0;
+      }
     }
 
     void updateThirst(float u_thirst = -0.001) { // updates thirst value, will be called each tick and whenever character drinks
       thirst += u_thirst;
+      if (thirst < 0) { // thirst should not drop bellow 0
+        thrist = 0;
+      }
     }
 
     void updateFatigue(float u_fatigue = -0.0001) { // updates fatigue value, will be called each tick and changes depending on activity level
       fatigue += u_fatigue;
+      if (fatigue < 0) { // fatiuge should not drop bellow 0
+        fatigue = 0;
+      }
     }
 
     void updateTempExt(float u_temp_ext) { // udpates external temperature of the person, will be called each tick
@@ -51,6 +60,15 @@ class Person {
 
 
     void updateHealth(float u_health = 0) { // updates health values, will be called each tick and whenever character takes damage or heals
+      if (hunger == 0) {
+        u_health -= 0.0001;
+      }
+      if (thrirst == 0) {
+        u_health -= 0.0005;
+      }
+      if (fatiuge == 0) {
+        u_health -= 0.00001;
+      }
       health += u_health;
     }
 
